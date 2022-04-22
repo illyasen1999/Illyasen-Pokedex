@@ -1,0 +1,36 @@
+API used: https://pokeapi.co/docs/v2
+Tutorial: https://www.youtube.com/watch?v=zOrejGF0oBA
+Enter Key function: https://github.com/DenverCoder1/weather-app-tutorial/blob/main/script.js
+
+w/ Button only && w/ BG Color based on type
+const getPokemon = document.querySelector(".getPokemon")
+.addEventListener("click", () => {
+    // w/ Id Search
+    let pokemonId = document.getElementById("pokemonId").value
+    let urlPokemonId = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
+    
+    // w/ Name Search
+    let pokemonName = document.getElementById("pokemonName").value.toLowerCase()
+    let urlPokemonName = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+    
+    fetch(urlPokemonName)
+    .then((res) => res.json())
+    .then((pokemon) => {
+        console.log(pokemon);
+
+        let pokemonResult = '' 
+            pokemonResult += `
+            <center>
+                <ul>
+                    <img src="${pokemon.sprites.front_default}" alt="pokemon">
+                    <li>ID: ${pokemon.id}</li>
+                    <li>NAME: ${pokemon.name}</li>
+                    <li>ORDER: ${pokemon.order}</li>
+                    <li>WEIGHT: ${pokemon.weight}</li>
+                </ul>
+            </center>
+            `
+        document.querySelector(".pokemonDiv")
+        .insertAdjacentHTML("afterbegin", pokemonResult)
+    })
+})

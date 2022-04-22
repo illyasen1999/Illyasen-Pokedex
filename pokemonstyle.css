@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root{
+    /* Pokemon Colors */
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --yellow-color: #fbd743;
+    --red-color: #ff1f1f;
+    --light-blue: #5db9ff;
+    --dark-blue: #363b81;
+
+    /* Pokemon Fonts */
+    --pokemon-font: 'Press Start 2P', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    scroll-behavior: smooth;
+}
+.pokedex{
+    padding: 10px;
+    width: 50%;
+    font-family: var(--pokemon-font);
+}
+.section{
+    border: 5px solid var(--dark-blue);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--light-blue);
+}
+.pokeimg{
+    width: 35%;
+}
+.pokemonList{
+    border: none;
+    background-color: var(--dark-blue);
+    color: var(--light-color);
+    margin: 10px 0;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 20px;
+    width: 70%;
+}
+.pokemonItems{
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 5px;
+}
+#pokemonName, .getPokemonBtn{
+    margin: 1rem 0;
+}
+#pokemonName{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--dark-blue);
+    color: var(--yellow-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+#pokemonName:focus{
+    background-color: var(--yellow-color);
+    color: var(--dark-blue);
+}
+.getPokemonBtn{
+    padding: 1rem 2rem;
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--yellow-color);
+    cursor: pointer;
+}
+.getPokemonBtn:hover{
+    background-color: var(--yellow-color);
+    color: var(--dark-blue);
+}
