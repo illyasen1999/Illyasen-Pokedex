@@ -18,6 +18,7 @@ Dark #705848
 Steel	#B8B8D0 
 Fairy #EE99AC
 
+BG Colors
 ???
 document.querySelector(".pokemonList").style.backgroundColor = "#68A090"
 

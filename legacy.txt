@@ -35,7 +35,7 @@ const getPokemon = document.querySelector(".getPokemon")
     })
 })
 
-Replaced with Switch Statements
+Replaced with Switch Statements:
 if(type == "???"){
         document.querySelector(".pokemonList").style.backgroundColor = "#68A090"
     }
